@@ -1,9 +1,10 @@
 site_name: Tarea 4 C17105
 
 nav:
+  - Index: ondex.md
   - Reference: ode.md
   - Ejemplos: ejemplos.md
-  - Index: ondex.md
+    
 theme:
   name: readthedocs
 
