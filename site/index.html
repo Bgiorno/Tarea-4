@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Tarea 4 C17105</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to MkDocs";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Tarea 4 C17105
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ode/">Reference</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ejemplos/">Ejemplos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ondex/">Index</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Tarea 4 C17105</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Welcome to MkDocs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+<p>En la resolución de ecuaciones diferenciales ordinarias (ODEs), los métodos numéricos son esenciales para obtener aproximaciones cuando no se dispone de soluciones analíticas. A continuación, se presenta una introducción a tres métodos numéricos comunes: el método de Euler, el método de Runge-Kutta de orden 2 (RK2) y el método de Runge-Kutta de orden 4 (RK4).</p>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<pre><code>$$ X_i $$
+</code></pre>
+<h2 id="metodo-de-euler">Método de Euler</h2>
+<p>El método de Euler es uno de los métodos numéricos más simples para resolver ODEs. Es un método de primer orden, lo que significa que el error por paso es proporcional al cuadrado del tamaño del paso. La fórmula básica para el método de Euler es:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> x_i = x_{i-1} + h f(x_{i-1}) </div>
+<script type="math/tex; mode=display"> x_i = x_{i-1} + h f(x_{i-1}) </script>
+</div>
+<p>donde:
+- <code>y_n</code> - Es la aproximación de la solución en el paso <span class="arithmatex"><span class="MathJax_Preview"> n </span><script type="math/tex"> n </script></span>.
+- <span class="arithmatex"><span class="MathJax_Preview"> h </span><script type="math/tex"> h </script></span> es el tamaño del paso.
+- <span class="arithmatex"><span class="MathJax_Preview"> f(t, y) </span><script type="math/tex"> f(t, y) </script></span> es la función que define la ODE <span class="arithmatex"><span class="MathJax_Preview"> \frac{dy}{dt} = f(t, y) </span><script type="math/tex"> \frac{dy}{dt} = f(t, y) </script></span>.</p>
+<h2 id="metodo-de-runge-kutta-de-orden-2-rk2">Método de Runge-Kutta de Orden 2 (RK2)</h2>
+<p>El método de Runge-Kutta de segundo orden, también conocido como método del punto medio o método de Heun, mejora la precisión del método de Euler. Una forma común del método RK2 es:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> k_1 = h f(t_n, y_n) $$
+$$ k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) $$
+$$ y_{n+1} = y_n + k_2 </div>
+<script type="math/tex; mode=display"> k_1 = h f(t_n, y_n) $$
+$$ k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) $$
+$$ y_{n+1} = y_n + k_2 </script>
+</div>
+<h2 id="metodo-de-runge-kutta-de-orden-4-rk4">Método de Runge-Kutta de Orden 4 (RK4)</h2>
+<p>El método de Runge-Kutta de cuarto orden es uno de los métodos más utilizados debido a su precisión y estabilidad. Este método calcula cuatro incrementos (<span class="arithmatex"><span class="MathJax_Preview"> k_1, k_2, k_3, k_4 </span><script type="math/tex"> k_1, k_2, k_3, k_4 </script></span>) para obtener una mejor aproximación de la solución. Las fórmulas son:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> k_1 = h f(t_n, y_n) $$
+$$ k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) $$
+$$ k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}) $$
+$$ k_4 = h f(t_n + h, y_n + k_3) </div>
+<script type="math/tex; mode=display"> k_1 = h f(t_n, y_n) $$
+$$ k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) $$
+$$ k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}) $$
+$$ k_4 = h f(t_n + h, y_n + k_3) </script>
+</div>
+<p>La actualización de la solución es entonces:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4) </div>
+<script type="math/tex; mode=display"> y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4) </script>
+</div>
+<h2 id="mkdocs-commands">MkDocs Commands</h2>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><code>$x_i$</code> - Sub indice prueba.</li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-06-23 16:37:33.210454+00:00
+-->
